@@ -4,8 +4,8 @@
 <head>
   <script defer src="/_vercel/insights/script.js"></script>
   <script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVKZQETQP1"></script>
   <script>
@@ -18,1084 +18,654 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brenno Gomes | Developer</title>
-</head>
-
-  <!-- FAVICON -->
 
   <link rel="icon" href="./images/favicon.png?v=2">
 
-  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="preconnect"
-  href="https://fonts.googleapis.com">
-
-  <link rel="preconnect"
-  href="https://fonts.gstatic.com"
-  crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-  rel="stylesheet">
-
-  <!-- ICONS -->
-
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
   <style>
-
-   *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
-::selection{
-  background:#a855f7;
-  color:white;
-}
-
-body{
-  font-family:'Inter',sans-serif;
-  background:#05010e;
-  color:white;
-  overflow-x:hidden;
-}
-
-/* BACKGROUND GLOW */
-
-body::before{
-  content:'';
-  position:fixed;
-
-  width:700px;
-  height:700px;
-
-  background:#7c3aed;
-
-  top:-300px;
-  right:-250px;
-
-  filter:blur(220px);
-
-  opacity:0.15;
-
-  z-index:-1;
-}
-
-body::after{
-  content:'';
-  position:fixed;
-
-  width:500px;
-  height:500px;
-
-  background:#a855f7;
-
-  bottom:-250px;
-  left:-200px;
-
-  filter:blur(220px);
-
-  opacity:0.08;
-
-  z-index:-1;
-}
-
-/* HEADER */
-
-header{
-  width:100%;
-
-  position:fixed;
-
-  top:0;
-  left:0;
-
-  z-index:1000;
-
-  padding:28px 10%;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-
-  background:rgba(5,1,14,0.55);
-
-  backdrop-filter:blur(14px);
-
-  border-bottom:1px solid rgba(255,255,255,0.05);
-
-  box-shadow:0 10px 40px rgba(0,0,0,0.25);
-}
-
-.logo{
-  font-size:28px;
-  font-weight:800;
-  letter-spacing:1px;
-}
-
-.logo span{
-  color:#a855f7;
-}
-
-nav{
-  display:flex;
-  gap:35px;
-}
-
-nav a{
-  text-decoration:none;
-
-  color:#9ca3af;
-
-  font-size:15px;
-
-  transition:all 0.35s ease;
-
-  position:relative;
-}
-
-nav a::after{
-  content:'';
-
-  position:absolute;
-
-  left:0;
-  bottom:-8px;
-
-  width:0%;
-  height:2px;
-
-  background:#a855f7;
-
-  transition:all 0.35s ease;
-}
-
-nav a:hover{
-  color:white;
-}
-
-nav a:hover::after{
-  width:100%;
-}
-
-/* SECTIONS */
-
-section{
-  padding:130px 10%;
-}
-
-/* HERO */
-
-.hero{
-  min-height:100vh;
-
-  display:flex;
-
-  justify-content:center;
-  align-items:center;
-
-  text-align:center;
-}
-
-.hero-text{
-  max-width:950px;
-}
-
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-
-  padding:12px 22px;
-
-  border-radius:40px;
-
-  background:rgba(255,255,255,0.03);
-
-  border:1px solid rgba(255,255,255,0.08);
-
-  color:#c084fc;
-
-  margin-bottom:35px;
-
-  font-size:14px;
-}
-
-.hero-text h1{
-  font-size:120px;
-
-  line-height:0.9;
-
-  margin-bottom:35px;
-
-  font-weight:900;
-
-  letter-spacing:-6px;
-}
-
-.gradient{
-  background:linear-gradient(
-    to right,
-    #ffffff,
-    #a855f7
-  );
-
-  background-clip:text;
-  -webkit-background-clip:text;
-
-  color:transparent;
-  -webkit-text-fill-color:transparent;
-
-  text-shadow:0 0 35px rgba(168,85,247,0.35);
-}
-
-.hero-text p{
-  font-size:22px;
-
-  color:#9ca3af;
-
-  line-height:2;
-
-  max-width:760px;
-
-  margin:auto;
-
-  margin-bottom:55px;
-}
-
-.buttons{
-  display:flex;
-
-  justify-content:center;
-
-  gap:22px;
-
-  flex-wrap:wrap;
-}
-
-/* BUTTONS */
-
-.btn{
-  padding:18px 38px;
-
-  border-radius:18px;
-
-  text-decoration:none;
-
-  font-weight:600;
-
-  display:flex;
-  align-items:center;
-  gap:12px;
-
-  transition:all 0.35s ease;
-}
-
-.btn-primary{
-  background:#a855f7;
-  color:white;
-}
-
-.btn-primary:hover{
-  transform:translateY(-6px);
-
-  box-shadow:0 15px 40px rgba(168,85,247,0.35);
-}
-
-.btn-secondary{
-  background:rgba(255,255,255,0.03);
-
-  border:1px solid rgba(255,255,255,0.08);
-
-  color:white;
-}
-
-.btn-secondary:hover{
-  transform:translateY(-6px);
-
-  border-color:#a855f7;
-
-  color:#c084fc;
-}
-
-/* TITLES */
-
-.title{
-  font-size:65px;
-
-  text-align:center;
-
-  margin-bottom:100px;
-
-  font-weight:900;
-
-  letter-spacing:-3px;
-}
-
-.title span{
-  color:#a855f7;
-}
-
-/* ABOUT */
-
-.about{
-  display:grid;
-
-  grid-template-columns:1fr 1fr;
-
-  gap:45px;
-
-  align-items:center;
-}
-
-.about-text p{
-  color:#9ca3af;
-
-  font-size:18px;
-
-  line-height:2;
-}
-
-.about-cards{
-  display:grid;
-
-  grid-template-columns:1fr 1fr;
-
-  gap:20px;
-}
-
-.mini-card{
-  background:#0b0616;
-
-  border:1px solid rgba(255,255,255,0.06);
-
-  border-radius:26px;
-
-  padding:35px;
-
-  transition:all 0.35s ease;
-}
-
-.mini-card:hover{
-  transform:translateY(-10px);
-
-  border-color:#a855f7;
-
-  box-shadow:0 0 30px rgba(168,85,247,0.15);
-}
-
-.mini-card h3{
-  font-size:42px;
-
-  color:white;
-
-  margin-bottom:12px;
-}
-
-.mini-card p{
-  color:#9ca3af;
-}
-
-/* SKILLS */
-
-.skills-grid{
-  display:grid;
-
-  grid-template-columns:
-  repeat(auto-fit,minmax(260px,1fr));
-
-  gap:28px;
-}
-
-.skill-card{
-  background:#0b0616;
-
-  border:1px solid rgba(255,255,255,0.06);
-
-  border-radius:30px;
-
-  padding:45px;
-
-  transition:all 0.4s ease;
-}
-
-.skill-card:hover{
-  transform:translateY(-12px);
-
-  border-color:#a855f7;
-
-  box-shadow:0 20px 50px rgba(0,0,0,0.45);
-}
-
-.skill-card i{
-  font-size:52px;
-
-  color:#c084fc;
-
-  margin-bottom:28px;
-}
-
-.skill-card h3{
-  font-size:30px;
-
-  margin-bottom:16px;
-}
-
-.skill-card p{
-  color:#9ca3af;
-
-  line-height:1.9;
-}
-
-/* PROJECTS */
-
-.projects-grid{
-  display:grid;
-
-  grid-template-columns:
-  repeat(auto-fit,minmax(340px,1fr));
-
-  gap:35px;
-}
-
-.project-card{
-  background:#0b0616;
-
-  border:1px solid rgba(255,255,255,0.06);
-
-  border-radius:32px;
-
-  overflow:hidden;
-
-  transition:all 0.4s ease;
-
-  position:relative;
-}
-
-.project-card:hover{
-  transform:translateY(-12px);
-
-  border-color:#a855f7;
-
-  box-shadow:0 20px 60px rgba(168,85,247,0.12);
-}
-
-.project-image{
-  height:220px;
-
-  background:linear-gradient(
-    135deg,
-    #140523,
-    #2a0b45
-  );
-
-  border-bottom:1px solid rgba(255,255,255,0.05);
-
-  position:relative;
-}
-
-.project-content{
-  padding:40px;
-}
-
-.project-content h3{
-  font-size:32px;
-
-  margin-bottom:18px;
-}
-
-.project-content p{
-  color:#9ca3af;
-
-  line-height:1.9;
-
-  margin-bottom:35px;
-}
-
-.status{
-  display:inline-block;
-
-  margin-bottom:18px;
-
-  padding:8px 16px;
-
-  border-radius:30px;
-
-  font-size:13px;
-
-  font-weight:600;
-
-  background:rgba(168,85,247,0.12);
-
-  border:1px solid rgba(168,85,247,0.35);
-
-  color:#d8b4fe;
-
-  letter-spacing:0.5px;
-}
-
-/* CONTACT */
-
-.contact{
-  text-align:center;
-}
-
-.contact p{
-  color:#9ca3af;
-
-  font-size:18px;
-
-  margin-bottom:45px;
-}
-
-.socials{
-  display:flex;
-
-  justify-content:center;
-
-  gap:28px;
-
-  flex-wrap:wrap;
-}
-
-.socials a{
-  width:85px;
-  height:85px;
-
-  border-radius:50%;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  text-decoration:none;
-
-  background:rgba(255,255,255,0.03);
-
-  backdrop-filter:blur(12px);
-
-  border:1px solid rgba(255,255,255,0.06);
-
-  color:white;
-
-  font-size:32px;
-
-  transition:all 0.35s ease;
-
-  position:relative;
-
-  overflow:hidden;
-}
-
-.socials a::before{
-  content:'';
-
-  position:absolute;
-
-  width:100%;
-  height:100%;
-
-  background:radial-gradient(
-    circle,
-    rgba(168,85,247,0.35),
-    transparent 70%
-  );
-
-  opacity:0;
-
-  transition:0.35s;
-}
-
-.socials a:hover{
-  transform:translateY(-10px) scale(1.08);
-
-  border-color:#a855f7;
-
-  color:#c084fc;
-
-  box-shadow:
-  0 0 25px rgba(168,85,247,0.25),
-  0 0 60px rgba(168,85,247,0.08);
-}
-
-.socials a:hover::before{
-  opacity:1;
-}
-
-.socials a i{
-  position:relative;
-  z-index:2;
-}
-
-/* FOOTER */
-
-footer{
-  padding:35px;
-
-  text-align:center;
-
-  color:#6b7280;
-
-  border-top:1px solid rgba(255,255,255,0.05);
-
-  margin-top:80px;
-
-  line-height:1.8;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:1100px){
-
-  nav{
-    display:none;
-  }
-
-  .hero{
-    padding-top:180px;
-  }
-
-  .hero-text h1{
-    font-size:75px;
-  }
-
-  .about{
-    grid-template-columns:1fr;
-  }
-
-  .title{
-    font-size:48px;
-  }
-
-}
-
-@media(max-width:768px){
-
-  section{
-    padding:110px 7%;
-  }
-
-  .hero-text h1{
-    font-size:58px;
-  }
-
-  .hero-text p{
-    font-size:18px;
-  }
-
-  .title{
-    font-size:40px;
-  }
-
-  .project-content{
-    padding:30px;
-  }
-
-  .socials a{
-    width:75px;
-    height:75px;
-
-    font-size:28px;
-  }
-
-}
-
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    ::selection{
+      background:#a855f7;
+      color:white;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:#05010e;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* BACKGROUND GLOW */
+    body::before{
+      content:'';
+      position:fixed;
+      width:700px;
+      height:700px;
+      background:#7c3aed;
+      top:-300px;
+      right:-250px;
+      filter:blur(220px);
+      opacity:0.15;
+      z-index:-1;
+    }
+
+    body::after{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:#a855f7;
+      bottom:-250px;
+      left:-200px;
+      filter:blur(220px);
+      opacity:0.08;
+      z-index:-1;
+    }
+
+    /* HEADER */
+    header{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      z-index:1000;
+      padding:28px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:rgba(5,1,14,0.55);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,255,255,0.05);
+      box-shadow:0 10px 40px rgba(0,0,0,0.25);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:800;
+      letter-spacing:1px;
+    }
+
+    .logo span{
+      color:#a855f7;
+    }
+
+    nav{
+      display:flex;
+      gap:35px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#9ca3af;
+      font-size:15px;
+      transition:all 0.35s ease;
+      position:relative;
+    }
+
+    nav a::after{
+      content:'';
+      position:absolute;
+      left:0;
+      bottom:-8px;
+      width:0%;
+      height:2px;
+      background:#a855f7;
+      transition:all 0.35s ease;
+    }
+
+    nav a:hover{
+      color:white;
+    }
+
+    nav a:hover::after{
+      width:100%;
+    }
+
+    /* SECTIONS */
+    section{
+      padding:130px 10%;
+    }
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    .hero-text{
+      max-width:950px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 22px;
+      border-radius:40px;
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.08);
+      color:#c084fc;
+      margin-bottom:35px;
+      font-size:14px;
+    }
+
+    .hero-text h1{
+      font-size:120px;
+      line-height:0.9;
+      margin-bottom:35px;
+      font-weight:900;
+      letter-spacing:-6px;
+    }
+
+    .gradient{
+      background:linear-gradient(to right, #ffffff, #a855f7);
+      background-clip:text;
+      -webkit-background-clip:text;
+      color:transparent;
+      -webkit-text-fill-color:transparent;
+      text-shadow:0 0 35px rgba(168,85,247,0.35);
+    }
+
+    .hero-text p{
+      font-size:22px;
+      color:#9ca3af;
+      line-height:2;
+      max-width:760px;
+      margin:auto;
+      margin-bottom:55px;
+    }
+
+    .buttons{
+      display:flex;
+      justify-content:center;
+      gap:22px;
+      flex-wrap:wrap;
+    }
+
+    /* BUTTONS */
+    .btn{
+      padding:18px 38px;
+      border-radius:18px;
+      text-decoration:none;
+      font-weight:600;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      transition:all 0.35s ease;
+    }
+
+    .btn-primary{
+      background:#a855f7;
+      color:white;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-6px);
+      box-shadow:0 15px 40px rgba(168,85,247,0.35);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.08);
+      color:white;
+    }
+
+    .btn-secondary:hover{
+      transform:translateY(-6px);
+      border-color:#a855f7;
+      color:#c084fc;
+    }
+
+    /* TITLES */
+    .title{
+      font-size:65px;
+      text-align:center;
+      margin-bottom:100px;
+      font-weight:900;
+      letter-spacing:-3px;
+    }
+
+    .title span{
+      color:#a855f7;
+    }
+
+    /* ABOUT */
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:45px;
+      align-items:center;
+    }
+
+    .about-text p{
+      color:#9ca3af;
+      font-size:18px;
+      line-height:2;
+    }
+
+    .about-cards{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .mini-card{
+      background:#0b0616;
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:26px;
+      padding:35px;
+      transition:all 0.35s ease;
+    }
+
+    .mini-card:hover{
+      transform:translateY(-10px);
+      border-color:#a855f7;
+      box-shadow:0 0 30px rgba(168,85,247,0.15);
+    }
+
+    .mini-card h3{
+      font-size:42px;
+      color:white;
+      margin-bottom:12px;
+    }
+
+    .mini-card p{
+      color:#9ca3af;
+    }
+
+    /* SKILLS */
+    .skills-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap:28px;
+    }
+
+    .skill-card{
+      background:#0b0616;
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:30px;
+      padding:45px;
+      transition:all 0.4s ease;
+    }
+
+    .skill-card:hover{
+      transform:translateY(-12px);
+      border-color:#a855f7;
+      box-shadow:0 20px 50px rgba(0,0,0,0.45);
+    }
+
+    .skill-card i{
+      font-size:52px;
+      color:#c084fc;
+      margin-bottom:28px;
+    }
+
+    .skill-card h3{
+      font-size:30px;
+      margin-bottom:16px;
+    }
+
+    .skill-card p{
+      color:#9ca3af;
+      line-height:1.9;
+    }
+
+    /* PROJECTS */
+    .projects-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
+      gap:35px;
+    }
+
+    .project-card{
+      background:#0b0616;
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:32px;
+      overflow:hidden;
+      transition:all 0.4s ease;
+      position:relative;
+    }
+
+    .project-card:hover{
+      transform:translateY(-12px);
+      border-color:#a855f7;
+      box-shadow:0 20px 60px rgba(168,85,247,0.12);
+    }
+
+    .project-image{
+      height:220px;
+      background:linear-gradient(135deg, #140523, #2a0b45);
+      border-bottom:1px solid rgba(255,255,255,0.05);
+      position:relative;
+    }
+
+    .project-content{
+      padding:40px;
+    }
+
+    .project-content h3{
+      font-size:32px;
+      margin-bottom:18px;
+    }
+
+    .project-content p{
+      color:#9ca3af;
+      line-height:1.9;
+      margin-bottom:35px;
+    }
+
+    .status{
+      display:inline-block;
+      margin-bottom:18px;
+      padding:8px 16px;
+      border-radius:30px;
+      font-size:13px;
+      font-weight:600;
+      background:rgba(168,85,247,0.12);
+      border:1px solid rgba(168,85,247,0.35);
+      color:#d8b4fe;
+      letter-spacing:0.5px;
+    }
+
+    /* CONTACT */
+    .contact{
+      text-align:center;
+    }
+
+    .contact p{
+      color:#9ca3af;
+      font-size:18px;
+      margin-bottom:45px;
+    }
+
+    .socials{
+      display:flex;
+      justify-content:center;
+      gap:28px;
+      flex-wrap:wrap;
+    }
+
+    .socials a{
+      width:85px;
+      height:85px;
+      border-radius:50%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-decoration:none;
+      background:rgba(255,255,255,0.03);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.06);
+      color:white;
+      font-size:32px;
+      transition:all 0.35s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .socials a::before{
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:radial-gradient(circle, rgba(168,85,247,0.35), transparent 70%);
+      opacity:0;
+      transition:0.35s;
+    }
+
+    .socials a:hover{
+      transform:translateY(-10px) scale(1.08);
+      border-color:#a855f7;
+      color:#c084fc;
+      box-shadow: 0 0 25px rgba(168,85,247,0.25), 0 0 60px rgba(168,85,247,0.08);
+    }
+
+    .socials a:hover::before{
+      opacity:1;
+    }
+
+    .socials a i{
+      position:relative;
+      z-index:2;
+    }
+
+    /* FOOTER */
+    footer{
+      padding:35px;
+      text-align:center;
+      color:#6b7280;
+      border-top:1px solid rgba(255,255,255,0.05);
+      margin-top:80px;
+      line-height:1.8;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:1100px){
+      nav{
+        display:none;
+      }
+      .hero{
+        padding-top:180px;
+      }
+      .hero-text h1{
+        font-size:75px;
+      }
+      .about{
+        grid-template-columns:1fr;
+      }
+      .title{
+        font-size:48px;
+      }
+    }
+
+    @media(max-width:768px){
+      section{
+        padding:110px 7%;
+      }
+      .hero-text h1{
+        font-size: 52px; 
+        letter-spacing: -2px;
+        line-height: 1.1;
+      }
+      .hero-text p{
+        font-size:18px;
+      }
+      .title{
+        font-size:40px;
+      }
+      .project-content{
+        padding:30px;
+      }
+      .socials a{
+        width: auto;
+        height: 75px;
+        padding: 0 24px;
+        border-radius: 40px;
+        font-size: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+      }
+      body {
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .about-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .mini-card {
+        padding: 24px;
+      }
+    }
   </style>
-
 </head>
 
 <body>
 
   <header>
-
     <div class="logo">
-
       Brenno<span>Gomes</span>
-
     </div>
-
     <nav>
-
       <a href="#home">Início</a>
-
       <a href="#about">Sobre</a>
-
       <a href="#skills">Skills</a>
-
       <a href="#projects">Projetos</a>
-
       <a href="#contact">Contato</a>
-
     </nav>
-
   </header>
 
   <section class="hero" id="home">
-
     <div class="hero-text">
-
       <div class="badge">
-
         👨‍💻 Desenvolvedor Back-end
-
       </div>
-
       <h1>
-
         Brenno <br>
-
-        <span class="gradient">
-          Gomes
-        </span>
-
+        <span class="gradient">Gomes</span>
       </h1>
-
       <p>
-
-        Estudante de Ciência da Computação na FIAP,
-        focado em desenvolvimento back-end,
-        banco de dados e desenvolvimento de software.
-
-        Desenvolvendo projetos modernos com
-        Python, C#, SQL e PostgreSQL.
-
+        Estudante de Ciência da Computação na FIAP, focado em desenvolvimento back-end, banco de dados e desenvolvimento de software. Desenvolvendo projetos modernos com Python, C#, SQL e PostgreSQL.
       </p>
-
       <div class="buttons">
-
-        <a 
-       href="https://github.com/BrennoGomes1" 
-       target="_blank" 
-       class="btn btn-primary" 
-       onclick="gtag('event', 'click_github_hero'); va('event', { name: 'click_github_hero' })">
- 
-        <i class="fa-brands fa-github"></i>
-           GitHub
-
+        <a href="https://github.com/BrennoGomes1" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click_github_hero')">
+          <i class="fa-brands fa-github"></i> GitHub
         </a>
-
-         <a 
-        href="https://www.linkedin.com/in/brenno-santos1/" 
-        target="_blank" 
-        class="btn btn-secondary" 
-        onclick="gtag('event', 'click_linkedin_hero'); va('event', { name: 'click_linkedin_hero' })">
- 
-           <i class="fa-brands fa-linkedin"></i>
-              LinkedIn
+        <a href="https://www.linkedin.com/in/brenno-santos1/" target="_blank" class="btn btn-secondary" onclick="gtag('event', 'click_linkedin_hero')">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
         </a>
-
       </div>
-
     </div>
-
   </section>
 
   <section id="about">
-
-    <h2 class="title">
-
-      Sobre <span>Mim</span>
-
-    </h2>
-
+    <h2 class="title">Sobre <span>Mim</span></h2>
     <div class="about">
-
       <div class="about-text">
-
         <p>
-
-          Apaixonado por tecnologia, desenvolvimento de software e resolução de problemas.
-
-          Atualmente estudo Ciência da Computação na FIAP e desenvolvo projetos voltados para back-end, banco de dados e arquitetura de software, buscando sempre escrever código limpo, organizado e eficiente.
-
-          Meu objetivo é transformar conhecimento em soluções reais enquanto evoluo como desenvolvedor.
-
+          Apaixonado por tecnologia, desenvolvimento de software e resolução de problemas. Atualmente estudo Ciência da Computação na FIAP e desenvolvo projetos voltados para back-end, banco de dados e arquitetura de software, buscando sempre escrever código limpo, organized e eficiente. Meu objetivo é transformar conhecimento em soluções reais enquanto evoluo como desenvolvedor.
         </p>
-
       </div>
-
       <div class="about-cards">
-
         <div class="mini-card">
-
           <h3>5+</h3>
-
           <p>Projetos desenvolvidos</p>
-
         </div>
-
         <div class="mini-card">
-
           <h3>FIAP</h3>
-
           <p>Ciência da Computação</p>
-
         </div>
-
         <div class="mini-card">
-
           <h3>Back-end</h3>
-
           <p>Foco principal</p>
-
         </div>
-
         <div class="mini-card">
-
           <h3>SQL</h3>
-
           <p>Banco de dados</p>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
   <section id="skills">
-
-    <h2 class="title">
-
-      Minhas <span>Skills</span>
-
-    </h2>
-
+    <h2 class="title">Minhas <span>Skills</span></h2>
     <div class="skills-grid">
-
       <div class="skill-card">
-
         <i class="fa-brands fa-python"></i>
-
         <h3>Python</h3>
-
-        <p>
-
-          Desenvolvimento back-end,
-          automações e lógica de programação.
-
-        </p>
-
+        <p>Desenvolvimento back-end, automações e lógica de programação.</p>
       </div>
-
       <div class="skill-card">
-
         <i class="fa-solid fa-code"></i>
-
         <h3>C# / .NET</h3>
-
-        <p>
-
-          Programação orientada a objetos
-          e aplicações modernas.
-
-        </p>
-
+        <p>Programação orientada a objetos e aplicações modernas.</p>
       </div>
-
       <div class="skill-card">
-
         <i class="fa-solid fa-database"></i>
-
         <h3>SQL</h3>
-
-        <p>
-
-          Consultas SQL, modelagem de dados
-          e persistência.
-
-        </p>
-
+        <p>Consultas SQL, modelagem de dados e frequência.</p>
       </div>
-
       <div class="skill-card">
-
         <i class="fa-solid fa-server"></i>
-
         <h3>PostgreSQL</h3>
-
-        <p>
-
-          Banco de dados relacional
-          e gerenciamento de informações.
-
-        </p>
-
+        <p>Banco de dados relacional e gerenciamento de informações.</p>
       </div>
-
     </div>
-
   </section>
 
   <section id="projects">
-
-    <h2 class="title">
-
-      Meus <span>Projetos</span>
-
-    </h2>
-
+    <h2 class="title">Meus <span>Projetos</span></h2>
     <div class="projects-grid">
-
       <div class="project-card">
-
         <div class="project-content">
-
           <h3>Sistema de Cadastro de Livros</h3>
-
-          <span class="status">
-
-            Finalizado
-
-          </span>
-
-          <p>
-
-            Aplicação em C# integrada ao PostgreSQL para o cadastro, organização e gerenciamento completo de catálogos de livros.
-
-          </p>
-
-          <a 
-          href="https://github.com/BrennoGomes1/cadastro-de-livros" 
-          target="_blank" 
-          class="btn btn-primary" 
-          onclick="gtag('event', 'click_projeto_livros'); va('event', { name: 'click_projeto_livros' })">
- 
-              <i class="fa-brands fa-github"></i>
-                  Ver Projeto
+          <span class="status">Finalizado</span>
+          <p>Aplicação em C# integrada ao PostgreSQL para o cadastro, organização e gerenciamento completo de catálogos de livros.</p>
+          <a href="https://github.com/BrennoGomes1/cadastro-de-livros" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click_projeto_livros')">
+            <i class="fa-brands fa-github"></i> Ver Projeto
           </a>
-
         </div>
-
       </div>
-
       <div class="project-card">
-
         <div class="project-content">
-
           <h3>Gerenciador Financeiro</h3>
-
-          <span class="status">
-
-            Finalizado
-
-          </span>
-
-          <p>
-
-            Aplicação para controle financeiro
-            utilizando Python e SQL.
-
-          </p>
-
-          <a 
-           href="https://github.com/BrennoGomes1/banking-system-sqlite" 
-           target="_blank" 
-           class="btn btn-primary" 
-           onclick="gtag('event', 'click_projeto_financeiro'); va('event', { name: 'click_projeto_financeiro' })">
-            
-              <i class="fa-brands fa-github"></i>
-              Ver Projeto
+          <span class="status">Finalizado</span>
+          <p>Aplicação para controle financeiro utilizando Python e SQL.</p>
+          <a href="https://github.com/BrennoGomes1/banking-system-sqlite" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click_projeto_financeiro')">
+            <i class="fa-brands fa-github"></i> Ver Projeto
           </a>
-
         </div>
-
       </div>
-
       <div class="project-card">
-
         <div class="project-content">
-
           <h3>ScreenSound</h3>
-
-          <span class="status">
-
-            Finalizado
-
-          </span>
-
-          <p>
-
-            Aplicação desenvolvida em C#
-            com foco em gerenciamento
-            e organização de músicas,
-            artistas e álbuns.
-
-          </p>
-
-          <a 
-           href="https://github.com/BrennoGomes1/ScreenSound" 
-           target="_blank" 
-           class="btn btn-primary" 
-           onclick="gtag('event', 'click_projeto_screensound'); va('event', { name: 'click_projeto_screensound' })">
-                
-             <i class="fa-brands fa-github"></i>
-               Ver Projeto
+          <span class="status">Finalizado</span>
+          <p>Aplicação desenvolvida em C# com foco em gerenciamento e organização de músicas, artistas e álbuns.</p>
+          <a href="https://github.com/BrennoGomes1/ScreenSound" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click_projeto_screensound')">
+            <i class="fa-brands fa-github"></i> Ver Projeto
           </a>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-  <section
-  class="contact"
-  id="contact">
-
-  <h2 class="title">
-
-    Entre em <span>Contato</span>
-
-  </h2>
-
-  <p>
-
-    Me acompanhe nas redes abaixo
-
-  </p>
-
-  <div class="socials">
-
-    <!-- GITHUB -->
-
-      <a 
-       href="https://github.com/BrennoGomes1" 
-       target="_blank" 
-       class="btn btn-primary" 
-       onclick="gtag('event', 'click_github_hero'); va('event', { name: 'click_github_hero' })">
- 
+  <section class="contact" id="contact">
+    <h2 class="title">Entre em <span>Contato</span></h2>
+    <p>Me acompanhe nas redes abaixo</p>
+    
+    <div class="socials">
+      <a href="https://github.com/BrennoGomes1" target="_blank" aria-label="GitHub" onclick="gtag('event', 'click_github_footer')">
         <i class="fa-brands fa-github"></i>
-           GitHub
+      </a>
 
-          </a>
-
-    <!-- LINKEDIN -->
-
-    <a 
-      href="https://www.linkedin.com/in/brenno-santos1/" 
-      target="_blank" 
-      aria-label="LinkedIn" 
-      onclick="gtag('event', 'click_linkedin_footer'); va('event', { name: 'click_linkedin_footer' })">
- 
+      <a href="https://www.linkedin.com/in/brenno-santos1/" target="_blank" aria-label="LinkedIn" onclick="gtag('event', 'click_linkedin_footer')">
         <i class="fa-brands fa-linkedin"></i>
-</a>
+      </a>
 
-    <!-- EMAIL -->
-
-    <a 
-      href="mailto:brennosantos877@email.com" 
-      aria-label="Email" 
-      onclick="gtag('event', 'click_email_footer'); va('event', { name: 'click_email_footer' })">
- 
-       <i class="fa-solid fa-envelope"></i>
-    </a>
-
-  </div>
-
-</section>
+      <a href="mailto:brennosantos877@email.com" aria-label="Email" onclick="gtag('event', 'click_email_footer')">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+  </section>
