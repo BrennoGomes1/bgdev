@@ -17,3 +17,5 @@ node_modules/
 # Arquivos temporários
 temp/
 tmp/
+
+node_modules/
