@@ -1,0 +1,19 @@
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Node 
+node_modules/
+
+# Variáveis de ambiente
+.env
+
+# Arquivos temporários
+temp/
+tmp/
