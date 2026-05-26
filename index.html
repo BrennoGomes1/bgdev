@@ -3,6 +3,9 @@
 
 <head>
   <script defer src="/_vercel/insights/script.js"></script>
+  <script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVKZQETQP1"></script>
   <script>
@@ -762,29 +765,25 @@ footer{
 
       <div class="buttons">
 
-        <a
-       href="https://github.com/BrennoGomes1"
-       target="_blank"
-       class="btn btn-primary"
-       onclick="gtag('event', 'click_github_hero')">
-
-          <i class="fa-brands fa-github"></i>
-
-          GitHub
+        <a 
+       href="https://github.com/BrennoGomes1" 
+       target="_blank" 
+       class="btn btn-primary" 
+       onclick="gtag('event', 'click_github_hero'); va('event', { name: 'click_github_hero' })">
+ 
+        <i class="fa-brands fa-github"></i>
+           GitHub
 
         </a>
 
-        <a
-         href="https://www.linkedin.com/in/brenno-santos1/"
-         target="_blank"
-         class="btn btn-secondary"
-         onclick="gtag('event', 'click_linkedin_hero')">
-           
-
-          <i class="fa-brands fa-linkedin"></i>
-
-          LinkedIn
-
+         <a 
+        href="https://www.linkedin.com/in/brenno-santos1/" 
+        target="_blank" 
+        class="btn btn-secondary" 
+        onclick="gtag('event', 'click_linkedin_hero'); va('event', { name: 'click_linkedin_hero' })">
+ 
+           <i class="fa-brands fa-linkedin"></i>
+              LinkedIn
         </a>
 
       </div>
@@ -959,16 +958,14 @@ footer{
 
           </p>
 
-          <a
-          href="https://github.com/BrennoGomes1/cadastro-de-livros"
-           target="_blank"
-            class="btn btn-primary"
-           onclick="gtag('event', 'click_projeto_livros')">
-
-            <i class="fa-brands fa-github"></i>
-
-            Ver Projeto
-
+          <a 
+          href="https://github.com/BrennoGomes1/cadastro-de-livros" 
+          target="_blank" 
+          class="btn btn-primary" 
+          onclick="gtag('event', 'click_projeto_livros'); va('event', { name: 'click_projeto_livros' })">
+ 
+              <i class="fa-brands fa-github"></i>
+                  Ver Projeto
           </a>
 
         </div>
@@ -994,16 +991,14 @@ footer{
 
           </p>
 
-          <a
-         href="https://github.com/BrennoGomes1/banking-system-sqlite"
-         target="_blank"
-         class="btn btn-primary"
-         onclick="gtag('event', 'click_projeto_financeiro')">
-
-            <i class="fa-brands fa-github"></i>
-
-            Ver Projeto
-
+          <a 
+           href="https://github.com/BrennoGomes1/banking-system-sqlite" 
+           target="_blank" 
+           class="btn btn-primary" 
+           onclick="gtag('event', 'click_projeto_financeiro'); va('event', { name: 'click_projeto_financeiro' })">
+            
+              <i class="fa-brands fa-github"></i>
+              Ver Projeto
           </a>
 
         </div>
@@ -1031,16 +1026,14 @@ footer{
 
           </p>
 
-          <a
-             href="https://github.com/BrennoGomes1/ScreenSound"
-             target="_blank"
-             class="btn btn-primary"
-             onclick="gtag('event', 'click_projeto_screensound')">
-
-            <i class="fa-brands fa-github"></i>
-
-            Ver Projeto
-
+          <a 
+           href="https://github.com/BrennoGomes1/ScreenSound" 
+           target="_blank" 
+           class="btn btn-primary" 
+           onclick="gtag('event', 'click_projeto_screensound'); va('event', { name: 'click_projeto_screensound' })">
+                
+             <i class="fa-brands fa-github"></i>
+               Ver Projeto
           </a>
 
         </div>
@@ -1071,37 +1064,36 @@ footer{
 
     <!-- GITHUB -->
 
-    <a
-      href="https://github.com/BrennoGomes1"
-      target="_blank"
-      aria-label="GitHub"
-      onclick="gtag('event', 'click_github_footer')">
+      <a 
+       href="https://github.com/BrennoGomes1" 
+       target="_blank" 
+       class="btn btn-primary" 
+       onclick="gtag('event', 'click_github_hero'); va('event', { name: 'click_github_hero' })">
+ 
+        <i class="fa-brands fa-github"></i>
+           GitHub
 
-      <i class="fa-brands fa-github"></i>
-
-    </a>
+          </a>
 
     <!-- LINKEDIN -->
 
-    <a
-      href="https://www.linkedin.com/in/brenno-santos1/"
-      target="_blank"
-      aria-label="LinkedIn"
-      onclick="gtag('event', 'click_linkedin_footer')">
-
-      <i class="fa-brands fa-linkedin"></i>
-
-    </a>
+    <a 
+      href="https://www.linkedin.com/in/brenno-santos1/" 
+      target="_blank" 
+      aria-label="LinkedIn" 
+      onclick="gtag('event', 'click_linkedin_footer'); va('event', { name: 'click_linkedin_footer' })">
+ 
+        <i class="fa-brands fa-linkedin"></i>
+</a>
 
     <!-- EMAIL -->
 
-    <a
-      href="mailto:brennosantos877@email.com"
-      aria-label="Email"
-      onclick="gtag('event', 'click_email_footer')">
-
-      <i class="fa-solid fa-envelope"></i>
-
+    <a 
+      href="mailto:brennosantos877@email.com" 
+      aria-label="Email" 
+      onclick="gtag('event', 'click_email_footer'); va('event', { name: 'click_email_footer' })">
+ 
+       <i class="fa-solid fa-envelope"></i>
     </a>
 
   </div>
