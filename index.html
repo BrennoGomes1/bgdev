@@ -17,21 +17,50 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brenno Gomes | Developer</title>
+  <title>Brenno Gomes | Desenvolvedor Back-end</title>
+  <meta name="description" content="Brenno Gomes — estudante de Ciência da Computação na FIAP e desenvolvedor back-end focado em Python, C#, SQL e PostgreSQL. Confira projetos, skills e formas de contato.">
+  <meta name="author" content="Brenno Gomes">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bgdev.com.br/">
+  <meta property="og:title" content="Brenno Gomes | Desenvolvedor Back-end">
+  <meta property="og:description" content="Estudante de Ciência da Computação na FIAP, focado em back-end, banco de dados e arquitetura de software. Python, C#, SQL e PostgreSQL.">
+  <meta property="og:image" content="https://bgdev.com.br/images/og-cover.png">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brenno Gomes | Desenvolvedor Back-end">
+  <meta name="twitter:description" content="Estudante de Ciência da Computação na FIAP, focado em back-end, banco de dados e arquitetura de software.">
+  <meta name="twitter:image" content="https://bgdev.com.br/images/og-cover.png">
+
+  <link rel="canonical" href="https://bgdev.com.br/">
 
   <link rel="icon" href="./images/favicon.png?v=2">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
+    @view-transition {
+      navigation: auto;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
+    }
+
+    html{
       scroll-behavior:smooth;
     }
 
@@ -47,34 +76,31 @@
       overflow-x:hidden;
     }
 
-    /* BACKGROUND GLOW */
     body::before{
       content:'';
       position:fixed;
-      width:700px;
-      height:700px;
-      background:#7c3aed;
-      top:-300px;
-      right:-250px;
-      filter:blur(220px);
-      opacity:0.15;
+      width:900px;
+      height:900px;
+      top:-350px;
+      right:-350px;
+      background:radial-gradient(circle, rgba(124,58,237,0.16), rgba(124,58,237,0) 70%);
       z-index:-1;
+      pointer-events:none;
     }
 
     body::after{
       content:'';
       position:fixed;
-      width:500px;
-      height:500px;
-      background:#a855f7;
-      bottom:-250px;
-      left:-200px;
-      filter:blur(220px);
-      opacity:0.08;
+      width:700px;
+      height:700px;
+      bottom:-300px;
+      left:-300px;
+      background:radial-gradient(circle, rgba(168,85,247,0.09), rgba(168,85,247,0) 70%);
       z-index:-1;
+      pointer-events:none;
     }
 
-    /* HEADER */
+    
     header{
       width:100%;
       position:fixed;
@@ -85,10 +111,9 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
-      background:rgba(5,1,14,0.55);
-      backdrop-filter:blur(14px);
+      background:rgba(5,1,14,0.75);
+      backdrop-filter:blur(8px);
       border-bottom:1px solid rgba(255,255,255,0.05);
-      box-shadow:0 10px 40px rgba(0,0,0,0.25);
     }
 
     .logo{
@@ -110,7 +135,7 @@
       text-decoration:none;
       color:#9ca3af;
       font-size:15px;
-      transition:all 0.35s ease;
+      transition:color 0.25s ease;
       position:relative;
     }
 
@@ -122,7 +147,7 @@
       width:0%;
       height:2px;
       background:#a855f7;
-      transition:all 0.35s ease;
+      transition:width 0.25s ease;
     }
 
     nav a:hover{
@@ -133,12 +158,12 @@
       width:100%;
     }
 
-    /* SECTIONS */
+    
     section{
       padding:130px 10%;
     }
 
-    /* HERO */
+   
     .hero{
       min-height:100vh;
       display:flex;
@@ -178,7 +203,6 @@
       -webkit-background-clip:text;
       color:transparent;
       -webkit-text-fill-color:transparent;
-      text-shadow:0 0 35px rgba(168,85,247,0.35);
     }
 
     .hero-text p{
@@ -197,7 +221,7 @@
       flex-wrap:wrap;
     }
 
-    /* BUTTONS */
+    
     .btn{
       padding:18px 38px;
       border-radius:18px;
@@ -206,7 +230,20 @@
       display:flex;
       align-items:center;
       gap:12px;
-      transition:all 0.35s ease;
+      transition:transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    }
+
+    
+    .btn-lg{
+      padding:22px 48px;
+      font-size:19px;
+      border-radius:20px;
+      gap:14px;
+    }
+
+    .btn-lg .icon{
+      width:1.15em;
+      height:1.15em;
     }
 
     .btn-primary{
@@ -215,8 +252,8 @@
     }
 
     .btn-primary:hover{
-      transform:translateY(-6px);
-      box-shadow:0 15px 40px rgba(168,85,247,0.35);
+      transform:translateY(-4px);
+      box-shadow:0 10px 24px rgba(168,85,247,0.3);
     }
 
     .btn-secondary{
@@ -226,12 +263,12 @@
     }
 
     .btn-secondary:hover{
-      transform:translateY(-6px);
+      transform:translateY(-4px);
       border-color:#a855f7;
       color:#c084fc;
     }
 
-    /* TITLES */
+    
     .title{
       font-size:65px;
       text-align:center;
@@ -244,7 +281,7 @@
       color:#a855f7;
     }
 
-    /* ABOUT */
+   
     .about{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -254,8 +291,8 @@
 
     .about-text p{
       color:#9ca3af;
-      font-size:18px;
-      line-height:2;
+      font-size:19px;
+      line-height:1.9;
     }
 
     .about-cards{
@@ -269,13 +306,12 @@
       border:1px solid rgba(255,255,255,0.06);
       border-radius:26px;
       padding:35px;
-      transition:all 0.35s ease;
+      transition:transform 0.25s ease, border-color 0.25s ease;
     }
 
     .mini-card:hover{
-      transform:translateY(-10px);
+      transform:translateY(-6px);
       border-color:#a855f7;
-      box-shadow:0 0 30px rgba(168,85,247,0.15);
     }
 
     .mini-card h3{
@@ -288,7 +324,15 @@
       color:#9ca3af;
     }
 
-    /* SKILLS */
+    .icon{
+      width:1em;
+      height:1em;
+      display:inline-block;
+      vertical-align:-0.125em;
+      flex-shrink:0;
+    }
+
+    
     .skills-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
@@ -300,19 +344,20 @@
       border:1px solid rgba(255,255,255,0.06);
       border-radius:30px;
       padding:45px;
-      transition:all 0.4s ease;
+      transition:transform 0.3s ease, border-color 0.3s ease;
     }
 
     .skill-card:hover{
-      transform:translateY(-12px);
+      transform:translateY(-8px);
       border-color:#a855f7;
-      box-shadow:0 20px 50px rgba(0,0,0,0.45);
     }
 
-    .skill-card i{
-      font-size:52px;
+    .skill-card .icon{
+      width:52px;
+      height:52px;
       color:#c084fc;
       margin-bottom:28px;
+      vertical-align:initial;
     }
 
     .skill-card h3{
@@ -325,7 +370,7 @@
       line-height:1.9;
     }
 
-    /* PROJECTS */
+    
     .projects-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
@@ -337,14 +382,13 @@
       border:1px solid rgba(255,255,255,0.06);
       border-radius:32px;
       overflow:hidden;
-      transition:all 0.4s ease;
+      transition:transform 0.3s ease, border-color 0.3s ease;
       position:relative;
     }
 
     .project-card:hover{
-      transform:translateY(-12px);
+      transform:translateY(-8px);
       border-color:#a855f7;
-      box-shadow:0 20px 60px rgba(168,85,247,0.12);
     }
 
     .project-image{
@@ -382,7 +426,7 @@
       letter-spacing:0.5px;
     }
 
-    /* CONTACT */
+   
     .contact{
       text-align:center;
     }
@@ -408,43 +452,19 @@
       justify-content:center;
       align-items:center;
       text-decoration:none;
-      background:rgba(255,255,255,0.03);
-      backdrop-filter:blur(12px);
+      background:rgba(255,255,255,0.04);
       border:1px solid rgba(255,255,255,0.06);
       color:white;
       font-size:32px;
-      transition:all 0.35s ease;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .socials a::before{
-      content:'';
-      position:absolute;
-      width:100%;
-      height:100%;
-      background:radial-gradient(circle, rgba(168,85,247,0.35), transparent 70%);
-      opacity:0;
-      transition:0.35s;
+      transition:transform 0.25s ease, border-color 0.25s ease, color 0.25s ease;
     }
 
     .socials a:hover{
-      transform:translateY(-10px) scale(1.08);
+      transform:translateY(-6px) scale(1.05);
       border-color:#a855f7;
       color:#c084fc;
-      box-shadow: 0 0 25px rgba(168,85,247,0.25), 0 0 60px rgba(168,85,247,0.08);
     }
 
-    .socials a:hover::before{
-      opacity:1;
-    }
-
-    .socials a i{
-      position:relative;
-      z-index:2;
-    }
-
-    /* FOOTER */
     footer{
       padding:35px;
       text-align:center;
@@ -454,7 +474,6 @@
       line-height:1.8;
     }
 
-    /* RESPONSIVE */
     @media(max-width:1100px){
       nav{
         display:none;
@@ -485,6 +504,10 @@
       .hero-text p{
         font-size:18px;
       }
+      .btn-lg{
+        padding:18px 32px;
+        font-size:17px;
+      }
       .title{
         font-size:40px;
       }
@@ -508,6 +531,15 @@
         box-sizing: border-box;
         overflow-x: hidden;
       }
+
+      body::before{
+        width:500px;
+        height:500px;
+      }
+      body::after{
+        width:380px;
+        height:380px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -523,6 +555,34 @@
 </head>
 
 <body>
+
+  <!-- Sprite SVG: substitui o Font Awesome (CDN inteiro) por só os 7 ícones
+       realmente usados no site. Cada <use> abaixo referencia um symbol daqui,
+       sem requisição externa nem peso desnecessário. -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="icon-github" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+    </symbol>
+    <symbol id="icon-python" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/>
+    </symbol>
+    <symbol id="icon-code" viewBox="0 0 640 512">
+      <path fill="currentColor" d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/>
+    </symbol>
+    <symbol id="icon-database" viewBox="0 0 448 512">
+      <path fill="currentColor" d="M448 80l0 48c0 44.2-100.3 80-224 80S0 172.2 0 128L0 80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6L448 288c0 44.2-100.3 80-224 80S0 332.2 0 288L0 186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6l0 85.9c0 44.2-100.3 80-224 80S0 476.2 0 432l0-85.9z"/>
+    </symbol>
+    <symbol id="icon-server" viewBox="0 0 512 512">
+      <path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96l0 64c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-64c0-35.3-28.7-64-64-64L64 32zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm48 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM64 288c-35.3 0-64 28.7-64 64l0 64c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-64c0-35.3-28.7-64-64-64L64 288zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm56 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/>
+    </symbol>
+    <symbol id="icon-envelope" viewBox="0 0 24 24">
+      <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m3 6 9 7 9-7"/>
+    </symbol>
+  </svg>
 
   <header>
     <div class="logo">
@@ -547,14 +607,14 @@
         <span class="gradient">Gomes</span>
       </h1>
       <p>
-        Estudante de Ciência da Computação na FIAP, focado em desenvolvimento back-end, banco de dados e desenvolvimento de software. Desenvolvendo projetos modernos com Python, C#, SQL e PostgreSQL.
+        Estudante de Ciência da Computação na FIAP, focado em back-end, banco de dados e arquitetura de software. Construo projetos modernos com Python, C#, SQL e PostgreSQL.
       </p>
       <div class="buttons">
-        <a href="https://github.com/BrennoGomes1" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click_github_hero')">
-          <i class="fa-brands fa-github"></i> GitHub
+        <a href="https://github.com/BrennoGomes1" target="_blank" class="btn btn-primary btn-lg" onclick="gtag('event', 'click_github_hero')">
+          <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg> GitHub
         </a>
-        <a href="https://www.linkedin.com/in/brenno-santos1/" target="_blank" class="btn btn-secondary" onclick="gtag('event', 'click_linkedin_hero')">
-          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        <a href="https://www.linkedin.com/in/brenno-santos1/" target="_blank" class="btn btn-secondary btn-lg" onclick="gtag('event', 'click_linkedin_hero')">
+          <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"/></svg> LinkedIn
         </a>
       </div>
     </div>
@@ -565,7 +625,7 @@
     <div class="about">
       <div class="about-text">
         <p>
-          Apaixonado por tecnologia, desenvolvimento de software e resolução de problemas. Atualmente estudo Ciência da Computação na FIAP e desenvolvo projetos voltados para back-end, banco de dados e arquitetura de software, buscando sempre escrever código limpo, organized e eficiente. Meu objetivo é transformar conhecimento em soluções reais enquanto evoluo como desenvolvedor.
+          Apaixonado por tecnologia, desenvolvimento de software e resolução de problemas. Atualmente estudo Ciência da Computação na FIAP e desenvolvo projetos voltados para back-end, banco de dados e arquitetura de software, buscando sempre escrever código limpo, organizado e eficiente. Meu objetivo é transformar conhecimento em soluções reais enquanto evoluo como desenvolvedor.
         </p>
       </div>
       <div class="about-cards">
@@ -593,22 +653,22 @@
     <h2 class="title">Minhas <span>Skills</span></h2>
     <div class="skills-grid">
       <div class="skill-card">
-        <i class="fa-brands fa-python"></i>
+        <svg class="icon" aria-hidden="true"><use href="#icon-python"/></svg>
         <h3>Python</h3>
-        <p>Desenvolvimento back-end, automações e lógica de programação.</p>
+        <p>Desenvolvimento back-end, scripts de automação e APIs.</p>
       </div>
       <div class="skill-card">
-        <i class="fa-solid fa-code"></i>
+        <svg class="icon" aria-hidden="true"><use href="#icon-code"/></svg>
         <h3>C# / .NET</h3>
         <p>Programação orientada a objetos e aplicações modernas.</p>
       </div>
       <div class="skill-card">
-        <i class="fa-solid fa-database"></i>
+        <svg class="icon" aria-hidden="true"><use href="#icon-database"/></svg>
         <h3>SQL</h3>
-        <p>Consultas SQL, modelagem de dados e frequência.</p>
+        <p>Consultas SQL, modelagem de dados e otimização de queries.</p>
       </div>
       <div class="skill-card">
-        <i class="fa-solid fa-server"></i>
+        <svg class="icon" aria-hidden="true"><use href="#icon-server"/></svg>
         <h3>PostgreSQL</h3>
         <p>Banco de dados relacional e gerenciamento de informações.</p>
       </div>
@@ -624,7 +684,7 @@
           <span class="status">Finalizado</span>
           <p>Aplicação em C# integrada ao PostgreSQL para o cadastro, organização e gerenciamento completo de catálogos de livros.</p>
           <a href="https://github.com/BrennoGomes1/cadastro-de-livros" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click_projeto_livros')">
-            <i class="fa-brands fa-github"></i> Ver Projeto
+            <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg> Ver Projeto
           </a>
         </div>
       </div>
@@ -634,7 +694,7 @@
           <span class="status">Finalizado</span>
           <p>Aplicação para controle financeiro utilizando Python e SQL.</p>
           <a href="https://github.com/BrennoGomes1/banking-system-sqlite" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click_projeto_financeiro')">
-            <i class="fa-brands fa-github"></i> Ver Projeto
+            <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg> Ver Projeto
           </a>
         </div>
       </div>
@@ -644,7 +704,7 @@
           <span class="status">Finalizado</span>
           <p>Aplicação desenvolvida em C# com foco em gerenciamento e organização de músicas, artistas e álbuns.</p>
           <a href="https://github.com/BrennoGomes1/ScreenSound" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click_projeto_screensound')">
-            <i class="fa-brands fa-github"></i> Ver Projeto
+            <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg> Ver Projeto
           </a>
         </div>
       </div>
@@ -657,15 +717,17 @@
     
     <div class="socials">
       <a href="https://github.com/BrennoGomes1" target="_blank" aria-label="GitHub" onclick="gtag('event', 'click_github_footer')">
-        <i class="fa-brands fa-github"></i>
+        <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg>
       </a>
 
       <a href="https://www.linkedin.com/in/brenno-santos1/" target="_blank" aria-label="LinkedIn" onclick="gtag('event', 'click_linkedin_footer')">
-        <i class="fa-brands fa-linkedin"></i>
+        <svg class="icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>
       </a>
 
       <a href="mailto:brennosantos877@email.com" aria-label="Email" onclick="gtag('event', 'click_email_footer')">
-        <i class="fa-solid fa-envelope"></i>
+        <svg class="icon" aria-hidden="true"><use href="#icon-envelope"/></svg>
       </a>
     </div>
   </section>
+</body>
+</html>
