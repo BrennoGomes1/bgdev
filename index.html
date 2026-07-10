@@ -130,6 +130,12 @@
       color:#a855f7;
     }
 
+    .header-right{
+      display:flex;
+      align-items:center;
+      gap:35px;
+    }
+
     nav{
       display:flex;
       gap:35px;
@@ -160,6 +166,28 @@
 
     nav a:hover::after{
       width:100%;
+    }
+
+    /* Language toggle */
+    #lang-toggle{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      color:#c084fc;
+      font-family:'Inter',sans-serif;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:1px;
+      padding:8px 16px;
+      border-radius:10px;
+      cursor:pointer;
+      transition:border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+      flex-shrink:0;
+    }
+
+    #lang-toggle:hover{
+      border-color:#a855f7;
+      color:white;
+      transform:translateY(-2px);
     }
 
   
@@ -563,9 +591,6 @@
 
 <body>
 
-  <!-- Sprite SVG: substitui o Font Awesome (CDN inteiro) por só os 7 ícones
-       realmente usados no site. Cada <use> abaixo referencia um symbol daqui,
-       sem requisição externa nem peso desnecessário. -->
   <svg style="display:none" aria-hidden="true">
     <symbol id="icon-github" viewBox="0 0 24 24">
       <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
@@ -595,25 +620,28 @@
     <div class="logo">
       Brenno<span>Gomes</span>
     </div>
-    <nav>
-      <a href="#home">Início</a>
-      <a href="#about">Sobre</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projetos</a>
-      <a href="#contact">Contato</a>
-    </nav>
+    <div class="header-right">
+      <nav>
+        <a href="#home" data-pt="Início" data-en="Home">Início</a>
+        <a href="#about" data-pt="Sobre" data-en="About">Sobre</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects" data-pt="Projetos" data-en="Projects">Projetos</a>
+        <a href="#contact" data-pt="Contato" data-en="Contact">Contato</a>
+      </nav>
+      <button id="lang-toggle" aria-label="Switch language">EN</button>
+    </div>
   </header>
 
   <section class="hero" id="home">
     <div class="hero-text">
-      <div class="badge">
+      <div class="badge" data-pt="👨‍💻 Desenvolvedor Back-end" data-en="👨‍💻 Back-end Developer">
         👨‍💻 Desenvolvedor Back-end
       </div>
       <h1>
         Brenno <br>
         <span class="gradient">Gomes</span>
       </h1>
-      <p>
+      <p data-pt="Estudante de Ciência da Computação na FIAP, focado em desenvolvimento back-end, banco de dados e desenvolvimento de software. Desenvolvendo projetos modernos com Python, C#, SQL e PostgreSQL." data-en="Computer Science student at FIAP, focused on back-end development, databases and software development. Building modern projects with Python, C#, SQL and PostgreSQL.">
         Estudante de Ciência da Computação na FIAP, focado em desenvolvimento back-end, banco de dados e desenvolvimento de software. Desenvolvendo projetos modernos com Python, C#, SQL e PostgreSQL.
       </p>
       <div class="buttons">
@@ -628,100 +656,100 @@
   </section>
 
   <section id="about">
-    <h2 class="title">Sobre <span>Mim</span></h2>
+    <h2 class="title" data-pt-html="Sobre <span>Mim</span>" data-en-html="About <span>Me</span>">Sobre <span>Mim</span></h2>
     <div class="about">
       <div class="about-text">
-        <p>
+        <p data-pt="Apaixonado por tecnologia, desenvolvimento de software e resolução de problemas. Atualmente estudo Ciência da Computação na FIAP e desenvolvo projetos voltados para back-end, banco de dados e arquitetura de software, buscando sempre escrever código limpo, organizado e eficiente. Meu objetivo é transformar conhecimento em soluções reais enquanto evoluo como desenvolvedor." data-en="Passionate about technology, software development and problem-solving. Currently studying Computer Science at FIAP, building projects focused on back-end, databases and software architecture, always striving to write clean, organized and efficient code. My goal is to turn knowledge into real-world solutions while growing as a developer.">
           Apaixonado por tecnologia, desenvolvimento de software e resolução de problemas. Atualmente estudo Ciência da Computação na FIAP e desenvolvo projetos voltados para back-end, banco de dados e arquitetura de software, buscando sempre escrever código limpo, organizado e eficiente. Meu objetivo é transformar conhecimento em soluções reais enquanto evoluo como desenvolvedor.
         </p>
       </div>
       <div class="about-cards">
         <div class="mini-card">
           <h3>5+</h3>
-          <p>Projetos desenvolvidos</p>
+          <p data-pt="Projetos desenvolvidos" data-en="Projects built">Projetos desenvolvidos</p>
         </div>
         <div class="mini-card">
           <h3>FIAP</h3>
-          <p>Ciência da Computação</p>
+          <p data-pt="Ciência da Computação" data-en="Computer Science">Ciência da Computação</p>
         </div>
         <div class="mini-card">
           <h3>Back-end</h3>
-          <p>Foco principal</p>
+          <p data-pt="Foco principal" data-en="Main focus">Foco principal</p>
         </div>
         <div class="mini-card">
           <h3>SQL</h3>
-          <p>Banco de dados</p>
+          <p data-pt="Banco de dados" data-en="Databases">Banco de dados</p>
         </div>
       </div>
     </div>
   </section>
 
   <section id="skills">
-    <h2 class="title">Minhas <span>Skills</span></h2>
+    <h2 class="title" data-pt-html="Minhas <span>Skills</span>" data-en-html="My <span>Skills</span>">Minhas <span>Skills</span></h2>
     <div class="skills-grid">
       <div class="skill-card">
         <svg class="icon" aria-hidden="true"><use href="#icon-python"/></svg>
         <h3>Python</h3>
-        <p>Desenvolvimento back-end, automações e lógica de programação.</p>
+        <p data-pt="Desenvolvimento back-end, automações e lógica de programação." data-en="Back-end development, automation and programming logic.">Desenvolvimento back-end, automações e lógica de programação.</p>
       </div>
       <div class="skill-card">
         <svg class="icon" aria-hidden="true"><use href="#icon-code"/></svg>
         <h3>C# / .NET</h3>
-        <p>Programação orientada a objetos e aplicações modernas.</p>
+        <p data-pt="Programação orientada a objetos e aplicações modernas." data-en="Object-oriented programming and modern applications.">Programação orientada a objetos e aplicações modernas.</p>
       </div>
       <div class="skill-card">
         <svg class="icon" aria-hidden="true"><use href="#icon-database"/></svg>
         <h3>SQL</h3>
-        <p>Consultas SQL, modelagem de dados e frequência.</p>
+        <p data-pt="Consultas SQL, modelagem de dados e frequência." data-en="SQL queries, data modeling and performance.">Consultas SQL, modelagem de dados e frequência.</p>
       </div>
       <div class="skill-card">
         <svg class="icon" aria-hidden="true"><use href="#icon-server"/></svg>
         <h3>PostgreSQL</h3>
-        <p>Banco de dados relacional e gerenciamento de informações.</p>
+        <p data-pt="Banco de dados relacional e gerenciamento de informações." data-en="Relational database and information management.">Banco de dados relacional e gerenciamento de informações.</p>
       </div>
     </div>
   </section>
 
   <section id="projects">
-    <h2 class="title">Meus <span>Projetos</span></h2>
+    <h2 class="title" data-pt-html="Meus <span>Projetos</span>" data-en-html="My <span>Projects</span>">Meus <span>Projetos</span></h2>
     <div class="projects-grid">
       <div class="project-card">
         <div class="project-content">
-          <h3>Sistema de Cadastro de Livros</h3>
-          <span class="status">Finalizado</span>
-          <p>Aplicação em C# integrada ao PostgreSQL para o cadastro, organização e gerenciamento completo de catálogos de livros.</p>
+          <h3 data-pt="Sistema de Cadastro de Livros" data-en="Book Registration System">Sistema de Cadastro de Livros</h3>
+          <span class="status" data-pt="Finalizado" data-en="Completed">Finalizado</span>
+          <p data-pt="Aplicação em C# integrada ao PostgreSQL para o cadastro, organização e gerenciamento completo de catálogos de livros." data-en="C# application integrated with PostgreSQL for registering, organizing and fully managing book catalogs.">Aplicação em C# integrada ao PostgreSQL para o cadastro, organização e gerenciamento completo de catálogos de livros.</p>
           <a href="https://github.com/BrennoGomes1/cadastro-de-livros" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click_projeto_livros')">
-            <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg> Ver Projeto
+            <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg> <span data-pt="Ver Projeto" data-en="View Project">Ver Projeto</span>
           </a>
         </div>
       </div>
       <div class="project-card">
         <div class="project-content">
-          <h3>Gerenciador Financeiro</h3>
-          <span class="status">Finalizado</span>
-          <p>Aplicação para controle financeiro com cadastro de receitas e despesas, histórico de transações e consultas por categoria. Desenvolvida em Python com SQLite.</p>
+          <h3 data-pt="Gerenciador Financeiro" data-en="Financial Manager">Gerenciador Financeiro</h3>
+          <span class="status" data-pt="Finalizado" data-en="Completed">Finalizado</span>
+          <p data-pt="Aplicação para controle financeiro com cadastro de receitas e despesas, histórico de transações e consultas por categoria. Desenvolvida em Python com SQLite." data-en="Financial management app with income and expense tracking, transaction history and category-based queries. Built with Python and SQLite.">Aplicação para controle financeiro com cadastro de receitas e despesas, histórico de transações e consultas por categoria. Desenvolvida em Python com SQLite.</p>
           <a href="https://github.com/BrennoGomes1/banking-system-sqlite" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click_projeto_financeiro')">
-            <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg> Ver Projeto
+            <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg> <span data-pt="Ver Projeto" data-en="View Project">Ver Projeto</span>
           </a>
         </div>
       </div>
       <div class="project-card">
         <div class="project-content">
           <h3>ScreenSound</h3>
-          <span class="status">Finalizado</span>
-          <p>Aplicação desenvolvida em C# com foco em gerenciamento e organização de músicas, artistas e álbuns.</p>
+          <span class="status" data-pt="Finalizado" data-en="Completed">Finalizado</span>
+          <p data-pt="Aplicação desenvolvida em C# com foco em gerenciamento e organização de músicas, artistas e álbuns." data-en="Application built with C# focused on managing and organizing songs, artists and albums.">Aplicação desenvolvida em C# com foco em gerenciamento e organização de músicas, artistas e álbuns.</p>
           <a href="https://github.com/BrennoGomes1/ScreenSound" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click_projeto_screensound')">
-            <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg> Ver Projeto
+            <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg> <span data-pt="Ver Projeto" data-en="View Project">Ver Projeto</span>
           </a>
         </div>
       </div>
       <div class="project-card">
         <div class="project-content">
-          <h3>Organizador de Estudos</h3>
-          <span class="status">Finalizado</span>
-          <p>Sistema de linha de comando em Python com PostgreSQL que prioriza automaticamente atividades acadêmicas com base em prazo, peso e nível de confiança do estudante.</p>
+          <h3 data-pt="Organizador de Estudos" data-en="Study Organizer">Organizador de Estudos</h3>
+          <span class="status" data-pt="Finalizado" data-en="Completed">Finalizado</span>
+          <p data-pt="Sistema de linha de comando em Python com PostgreSQL que prioriza automaticamente atividades acadêmicas com base em prazo, peso e nível de confiança do estudante." data-en="Python CLI system with PostgreSQL that automatically prioritizes academic tasks based on deadline, weight and student confidence level.">Sistema de linha de comando em Python com PostgreSQL que prioriza automaticamente atividades acadêmicas com base em prazo, peso e nível de confiança do estudante.</p>
           <a href="https://github.com/BrennoGomes1/organizador-estudo" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click_projeto_organizador')">
-            <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg> Ver Projeto
+            <svg class="icon" aria-hidden="true"><use href="#icon-github"/></svg> <span data-pt="Ver Projeto" data-en="View Project">Ver Projeto</span>
           </a>
         </div>
       </div>
@@ -729,8 +757,8 @@
   </section>
 
   <section class="contact" id="contact">
-    <h2 class="title">Entre em <span>Contato</span></h2>
-    <p>Me acompanhe nas redes abaixo</p>
+    <h2 class="title" data-pt-html="Entre em <span>Contato</span>" data-en-html="Get in <span>Touch</span>">Entre em <span>Contato</span></h2>
+    <p data-pt="Me acompanhe nas redes abaixo" data-en="Follow me on the links below">Me acompanhe nas redes abaixo</p>
     
     <div class="socials">
       <a href="https://github.com/BrennoGomes1" target="_blank" aria-label="GitHub" onclick="gtag('event', 'click_github_footer')">
@@ -747,6 +775,56 @@
     </div>
   </section>
 
+  <script>
+    (function(){
+      const btn = document.getElementById('lang-toggle');
+      let lang = localStorage.getItem('site-lang') || 'pt';
+
+      function applyLang(l) {
+        // Text-only elements (data-pt / data-en)
+        document.querySelectorAll('[data-pt]').forEach(function(el) {
+          var text = el.getAttribute('data-' + l);
+          if (text) el.textContent = text;
+        });
+
+        // HTML elements that contain <span> tags (data-pt-html / data-en-html)
+        document.querySelectorAll('[data-pt-html]').forEach(function(el) {
+          var html = el.getAttribute('data-' + l + '-html');
+          if (html) el.innerHTML = html;
+        });
+
+        // Update page metadata
+        document.documentElement.lang = l === 'pt' ? 'pt-BR' : 'en';
+        document.title = l === 'pt'
+          ? 'Brenno Gomes | Desenvolvedor Back-end'
+          : 'Brenno Gomes | Back-end Developer';
+
+        var metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+          metaDesc.content = l === 'pt'
+            ? 'Brenno Gomes — estudante de Ciência da Computação na FIAP e desenvolvedor back-end focado em Python, C#, SQL e PostgreSQL. Confira projetos, skills e formas de contato.'
+            : 'Brenno Gomes — Computer Science student at FIAP and back-end developer focused on Python, C#, SQL and PostgreSQL. Check out projects, skills and contact info.';
+        }
+
+        // Update button label and store preference
+        btn.textContent = l === 'pt' ? 'EN' : 'PT';
+        localStorage.setItem('site-lang', l);
+
+        // Track language switch
+        if (typeof gtag === 'function') {
+          gtag('event', 'switch_language', { language: l });
+        }
+      }
+
+      // Apply saved preference on load (only if English was previously selected)
+      if (lang === 'en') applyLang('en');
+
+      btn.addEventListener('click', function() {
+        lang = lang === 'pt' ? 'en' : 'pt';
+        applyLang(lang);
+      });
+    })();
+  </script>
 
 </body>
 </html>
